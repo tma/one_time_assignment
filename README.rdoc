@@ -1,6 +1,10 @@
 = one_time_assignment
 
-Description goes here.
+  class Post < ActiveRecord::Base
+    allow_one_time_assignment :password, :author_id
+  end
+
+Multiple assignment to one of these fields will raise a runtime error exception.
 
 == Note on Patches/Pull Requests
  
@@ -14,4 +18,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2010 Thomas Maurer. See LICENSE for details.
+Copyright (c) 2010 Thomas Maurer. Released under the MIT license.

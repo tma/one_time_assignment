@@ -5,13 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "one_time_assignment"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Restrict ActiveRecord fields to one assignment only.}
     gem.email = "thomas.maurer@simplificator.com"
     gem.homepage = "http://github.com/tma/one_time_assignment"
     gem.authors = ["Thomas Maurer"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    gem.add_development_dependency "shoulda", ">= 0"
+    gem.add_dependency "activerecord", ">= 0"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
